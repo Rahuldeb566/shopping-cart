@@ -1,82 +1,178 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-   <title>Shopping Cart</title>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
-   <link href="style.css" rel="stylesheet">
+    <title>Shopping Cart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-gr-c-s-loaded="true">
 
-   <section>
-      <div class="container">
-         <div class="cart">
-            <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
-                  <div class="row">
-                     <div class="col-md-7 center-item">
-                        <img src="images/product-1.png" alt="">
-                        <h5>iPhone 11 128GB Black</h5>
-                     </div>
+    <section>
+        <div class="container">
+            <div class="cart">
+                <div class="col-md-12 col-lg-10 mx-auto">
+                    <div class="cart-item" id="deleteRow">
+                        <div class="row" >
+                            <div class="col-md-7 center-item">
+                                <img src="images/product-1.png" alt="">
+                                <h5>iPhone 11 128GB Black</h5>
+                            </div>
 
-                     <div class="col-md-5 center-item">
-                        <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                            <div class="col-md-5 center-item">
+                                <div class="input-group number-spinner">
+                                    <button class="btn btn-default" id="Minus1"><i class="fas fa-minus"></i></button>
+                                    <input type="text" class="form-control text-center" value="1" id="item1">
+                                    <button class="btn btn-default" id="fstPlus"><i class="fas fa-plus"></i></button>
+                                </div>
+                                <h5>$<span id="iphone">1219</span></h5>
+                                <img src="images/remove.png" alt="" class="remove-item" id="delete1">
+                            </div>
                         </div>
-                        <h5>$1219</h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
-                     </div>
-                  </div>
-               </div>
+                    </div>
 
-               <div class="cart-item">
-                  <div class="row">
-                     <div class="col-md-7 center-item mx-auto">
-                        <img src="images/product-2.png" alt="">
-                        <h5>iPhone 11 Silicone Case - Black</h5>
-                     </div>
-                     <div class="col-md-5 center-item">
-                        <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                    <div class="cart-item" id="deleteRow2">
+                        <div class="row">
+                            <div class="col-md-7 center-item mx-auto">
+                                <img src="images/product-2.png" alt="">
+                                <h5>iPhone 11 Silicone Case - Black</h5>
+                            </div>
+                            <div class="col-md-5 center-item">
+                                <div class="input-group number-spinner">
+                                    <button class="btn btn-default" id="Minus2"><i class="fas fa-minus"></i></button>
+                                    <input type="text" class="form-control text-center" value="1" id="item2">
+                                    <button class="btn btn-default" id="scndPlus"><i class="fas fa-plus"></i></button>
 
+                                </div>
+                                <h5>$<span id="itemOneTotal">59</span></h5>
+                                <img src="images/remove.png" alt="" class="remove-item" id="delete2">
+                            </div>
                         </div>
-                        <h5>$59</h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="row">
 
-               <div class="cart-item">
-                  <div class="row">
+                            <div class="col-md-8">
+                                <h5>Subtotal: </h5>
+                                <h5>Tax:</h5>
+                                <h5>Total:</h5>
 
-                     <div class="col-md-8">
-                        <h5>Subtotal: </h5>
-                        <h5>Tax:</h5>
-                        <h5>Total:</h5>
-                     </div>
+                            </div>
 
-                     <div class="col-md-4 status">
-                        <h5>$1,278</h5>
-                        <h5>$0</h5>
-                        <h5>$1,278</h5>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
-               </div>
+                            <div class="col-md-4 status">
+                                <h5>$ <span id="STotal">1278</span> </h5>
+                                <h5><span id="tax">00</span></h5>
+                                <h5> $<span id="grandTotal">1278</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 pt-4 pb-4">
+                        <button type="button" class="btn btn-success check-out">Check Out</button>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </section>
+        </div>
+    </section>
+    
+    
+    <script>
+
+         const deleteOne = document.getElementById("delete1");
+         deleteOne.addEventListener("click", function(){
+            const deleteRow = document.getElementById("deleteRow");
+            deleteRow.style.display = "none";
+        })
+
+        const deleteTwo = document.getElementById("delete2");
+        deleteTwo.addEventListener("click", function(){
+           const deleteRow2 = document.getElementById("deleteRow2");
+           deleteRow2.style.display = "none";
+        })
+
+
+              
+        const fstPlus = document.getElementById("fstPlus");
+        fstPlus.addEventListener("click", function() {
+               const item1 = document.getElementById("item1").value++;
+               const iphone = document.getElementById("iphone").innerText;
+               const Iphone = parseFloat(iphone);
+               const addIphone = Iphone + 1219;
+               document.getElementById("iphone").innerText = addIphone;
+               const STotal = document.getElementById("STotal").innerText;
+               const totalOne = parseFloat(STotal);
+               const valueTotal = totalOne + 1219;
+               document.getElementById("STotal").innerText = valueTotal;
+               document.getElementById("grandTotal").innerText = valueTotal;
+        })
+
+        const Minus1 = document.getElementById("Minus1");
+        Minus1.addEventListener("click", function() {
+            const item1 = document.getElementById("item1")
+               if (item1.value <= 0 && minusValue <= 0) {
+                  item1.value = 0;
+                  minusValue = 0;
+               } 
+               else {
+                  item1.value--;
+               };
+            const iphone = document.getElementById("iphone").innerText;
+            const Iphone = parseFloat(iphone);
+            const minusIphone = Iphone - 1219;
+            document.getElementById("iphone").innerText = minusIphone;
+            const STotal = document.getElementById("STotal").innerText;
+            const totalOne = parseFloat(STotal);
+            const minusValue = totalOne - 1219;
+            document.getElementById("STotal").innerText = minusValue;
+            document.getElementById("grandTotal").innerText = minusValue;
+
+        })
+
+         const addItem = document.getElementById("scndPlus");
+         addItem.addEventListener("click", function() {
+            const item2 = document.getElementById("item2").value++;
+            const itemOneTotal = document.getElementById("itemOneTotal").innerText;
+            const itemOne = parseFloat(itemOneTotal);
+            const addItemOne = itemOne + 59;
+            document.getElementById("itemOneTotal").innerText = addItemOne;
+            const STotal = document.getElementById("STotal").innerText;
+            const totalOne = parseFloat(STotal);
+            const totalValue = totalOne + 59;
+            document.getElementById("STotal").innerText = totalValue;
+            document.getElementById("grandTotal").innerText = totalValue;
+
+        })
+
+
+        const mninusItem = document.getElementById("Minus2");
+        mninusItem.addEventListener("click", function() {
+            const item2 = document.getElementById("item2")
+               if (item2.value <= 0 && minusValue <= 0) {
+                  item2.value = 0;
+                  minusValue = 0;
+               } 
+               else {
+                  item2.value--;
+               };
+            const itemOneTotal = document.getElementById("itemOneTotal").innerText;
+            const itemOne = parseFloat(itemOneTotal);
+            const minusItemOne = itemOneTotal - 59;
+            document.getElementById("itemOneTotal").innerText = minusItemOne;
+            const STotal = document.getElementById("STotal").innerText;
+            const totalOne = parseFloat(STotal);
+            const minusValue = totalOne - 59;
+            document.getElementById("STotal").innerText = minusValue;
+            document.getElementById("grandTotal").innerText = minusValue;
+
+
+        })
+
+    </script>
+
+
+
 </body>
 
 </html>
